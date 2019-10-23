@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://techjoomla.com/joomla-development/joomla-using-jlayouts-search-tools-on-joomla-3-x-at-admin-backend-for-list-views.html -->
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="" description="" hint="JSEARCH_FILTER" />
+		<field name="cat_ids" type="category" label="JOPTION_FILTER_CATEGORY_LABEL" multiple="true"
+			extension="com_clouderp" description="JOPTION_FILTER_CATEGORY_DESC" onchange="this.form.submit();"
+			/>
+		<field name="showmodus" type="hidden"/>
+<!--		
+		<field name="event_type" type="list" label="COM_DPCALENDAR_VIEW_EVENTS_SELECT_NORMAL_EVENTS"
+			description="" onchange="this.form.submit();">
+			<option value="1">COM_DPCALENDAR_VIEW_EVENTS_SELECT_ORIGIONAL_EVENTS</option>
+			<option value="2">COM_DPCALENDAR_VIEW_EVENTS_SELECT_BOTH_EVENTS</option>
+			<option value="">COM_DPCALENDAR_VIEW_EVENTS_SELECT_NORMAL_EVENTS</option>
+		</field>
+		<field name="state" type="status" label="COM_CONTENT_FILTER_PUBLISHED"
+			description="COM_CONTENT_FILTER_PUBLISHED_DESC" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+		<field name="cat_id" type="category" label="JOPTION_FILTER_CATEGORY_LABEL"
+			extension="com_dpcalendar" description="JOPTION_FILTER_CATEGORY_DESC"
+			onchange="this.form.submit();" published="0,1,2">
+			<option value="">COM_DPCALENDAR_VIEW_EVENTS_SELECT_CALENDAR</option>
+		</field>
+		<field name="access" type="accesslevel" label="JOPTION_FILTER_ACCESS"
+			description="JOPTION_FILTER_ACCESS_DESC" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_ACCESS</option>
+		</field>
+		<field name="language" type="contentlanguage" label="JOPTION_FILTER_LANGUAGE"
+			description="JOPTION_FILTER_LANGUAGE_DESC" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_LANGUAGE</option>
+			<option value="*">JALL</option>
+		</field>
+		<field name="tag" type="tag" mode="nested" label="JOPTION_FILTER_TAG"
+			description="JOPTION_FILTER_TAG_DESC" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_TAG</option>
+		</field>
+		<field name="created_by" type="dpauthor" label="COM_CONTENT_FILTER_AUTHOR" table_name="dpcalendar_events"
+			description="COM_CONTENT_FILTER_AUTHOR_DESC" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_AUTHOR</option>
+		</field>
+		<field name="level" type="integer" first="1" last="10" step="1"
+			label="JOPTION_FILTER_LEVEL" languages="*" description="JOPTION_FILTER_LEVEL_DESC"
+			onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_MAX_LEVELS</option>
+		</field>
+-->		
+	</fields>
+	<fields name="list">
+		<field
+			name="showmodus"
+			type="list"
+			label="COM_CONTENT_LIST_SHOWMODUS"
+			description="COM_CONTENT_LIST_SHOWMODUS_DESC"
+			onchange="this.form.submit();"
+			default="card"
+			>
+			<option value="list">COM_CONTENT_LIST_SHOWMODUS_LIST</option>
+			<option value="card">COM_CONTENT_LIST_SHOWMODUS_CARD</option>
+		</field>
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_CONTENT_LIST_FULL_ORDERING"
+			description="COM_CONTENT_LIST_FULL_ORDERING_DESC"
+			onchange="Joomla.submitform();return false;"
+			default="1 ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="title ASC">JGLOBAL_TITLE_ASC</option>
+			<option value="title DESC">JGLOBAL_TITLE_DESC</option>
+			<option value="status ASC">JCATEGORY_ASC</option>
+			<option value="status DESC">JCATEGORY_DESC</option>
+		</field>
+<!-- onchange="console.log(this.value);document.adminForm.filter_order.value=this.value.split(' ')[0];document.adminForm.filter_order_Dir.value=this.value.split(' ')[1];Joomla.submitform();return false;"-->
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="inputbox input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

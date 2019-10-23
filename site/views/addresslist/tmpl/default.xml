@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CLOUDERP_ADDRESSLISTVIEV_TITLE">
+		<message>COM_CLOUDERP_ADDRESSLISTVIEV_MESSAGE</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field name="requieredstate" 
+			type="Category" 
+			extension="com_clouderp" class="inputbox"
+			label="COM_CLOUDERP_ADDRESSLISTVIEV_CAT_LABLE" 
+			description="COM_CLOUDERP_ADDRESSLISTVIEV_CAT_DESC" 
+			multiple="true"
+			default="0"
+		>
+		<option value="0">COM_CLOUDERP_ADDRESSLISTVIEV_CAT_ALL</option>
+		</field>
+		</fieldset>
+	</fields>
+</metadata>
+
