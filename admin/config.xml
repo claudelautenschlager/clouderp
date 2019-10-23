@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="title"
+		label="COM_CLOUDERP_CONFIG_TITLE_SETTINGS_LABEL"
+		description="COM_CLOUDERP_CONFIG_TITLE_SETTINGS_DESC"
+	>
+		<field
+			name="propagateuser"
+			type="radio"
+			label="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEUSER_LABEL"
+			description="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEUSER_DESC"
+			default="1"
+			class="btn-group btn-group-yesno"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+			name="propagategroup"
+			type="usergrouplist"
+			label="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEUSERRIGHT_LABEL"
+			description="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEUSERRIGHT_DESC"
+		/>
+		<field name="dav_username" type="text" label="COM_CLOUDERP_CONFIG_FIELD_CARDDAVUSER_LABEL" description="COM_CLOUDERP_CONFIG_FIELD_CARDDAVUSER_DESC" size="20" required="false"/>
+		<field name="dav_password" type="password" label="COM_CLOUDERP_CONFIG_FIELD_CARDDAVPW_LABEL" description="COM_CLOUDERP_CONFIG_FIELD_CARDDAVPW_DESC" size="20" required="false"/>
+	
+	</fieldset>
+	<fieldset
+		name="Verteiler"
+		label="COM_CLOUDERP_CONFIG_TITLE_SETTINGSMT_LABEL"
+		description="COM_CLOUDERP_CONFIG_TITLE_SETTINGSMT_DESC"
+		addfieldpath="administrator/components/com_clouderp/models/fields"
+	>
+		<field name="smtp_host" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_HOSTMV_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_HOSTMV_DESC" size="128" required="false" />
+		<field name="smtp_port" type="text" label="COM_CLOUDERP_CONFIGURATION_FIELD_PORTMV_LABEL" description="COM_CLOUDERP_CONFIGURATION_FIELD_PORTMV_DESC" required="false" size="3"/>
+		<field name="smtp_sendername" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTSENDERNAMEMV_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTSENDERNAMEMV_DESC" size="120" required="false"/>
+		<field name="smtp_username" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTUSERNAMEMV_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTUSERNAMEMV_DESC" size="120" required="false"/>
+		<field name="smtp_password" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTPWMV_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTPWMV_DESC" size="100" required="false"/>
+	</fieldset>
+	
+	<fieldset
+		name="Fibu"
+		label="COM_CLOUDERP_CONFIG_TITLE_BOOKING_LABEL"
+		description="COM_CLOUDERP_CONFIG_TITLE_BOOKING_DESC"
+	>
+		<field name="ktDebiSammel" type="financeaccount" label="COM_COMCLOUD_CONFIGURATION_FIELD_FDEBISAMMEL_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_FDEBISAMMEL_DESC" size="20" required="false" />
+		<field name="ktDebiBank" type="financeaccount" label="COM_COMCLOUD_CONFIGURATION_FIELD_FBANK_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_FBANK_DESC" size="20" required="false" />
+
+	</fieldset>
+	
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+	>
+	<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_clouderp"
+			section="component"
+		/>
+	</fieldset>
+</config>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://techjoomla.com/joomla-development/joomla-using-jlayouts-search-tools-on-joomla-3-x-at-admin-backend-for-list-views.html -->
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="" description="" hint="JSEARCH_FILTER" />
+		<field name="bd_konto" type="financeaccount" label="COM_COMCLOUD_ACCOUTPAGE_FILTER_ACCOUNT_LABEL" description="COM_COMCLOUD_ACCOUTPAGE_FILTER_ACCOUNT_DESC" size="20" required="false" 
+		onchange="this.form.submit()"/>
+	</fields>
+
+	<fields name="list">
+<!--		
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_COMCLOUD_CUSTOMERLIST_FULL_ORDERING"
+			description="COM_COMCLOUD_CUSTOMERLIST_FULL_ORDERING_DESC"
+			onchange="Joomla.submitform();return false;"
+			default="1 ASC"
+			>
+			<option value="">COM_COMCLOUD_CUSTOMERLIST_SORT_BY</option>
+			<option value="title ASC">COM_COMCLOUD_CUSTOMERLIST_TITLE_ASC</option>
+			<option value="title DESC">COM_COMCLOUD_CUSTOMERLIST_TITLE_DESC</option>
+			<option value="status ASC">COM_COMCLOUD_CUSTOMERLIST_CATEGORY_ASC</option>
+			<option value="status DESC">COM_COMCLOUD_CUSTOMERLIST_CATEGORY_DESC</option>
+			
+			<option value="birth ASC">COM_COMCLOUD_CUSTOMERLIST_BIRTH_ASC</option>
+			<option value="birth DESC">COM_COMCLOUD_CUSTOMERLIST_BIRTH_DESC</option>
+			
+			<option value="geburttag ASC">COM_COMCLOUD_CUSTOMERLIST_BIRTHDAY_ASC</option>
+			<option value="geburttag DESC">COM_COMCLOUD_CUSTOMERLIST_BIRTHDAY_DESC</option>
+			
+			
+		</field>
+-->		
+<!-- onchange="console.log(this.value);document.adminForm.filter_order.value=this.value.split(' ')[0];document.adminForm.filter_order_Dir.value=this.value.split(' ')[1];Joomla.submitform();return false;"-->
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_COMCLOUD_CUSTOMERLIST_LIMIT"
+			description="COM_COMCLOUD_CUSTOMERLIST_LIMIT_DESC"
+			class="inputbox input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+	
+</form>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+	<field name="fieldelement" type="number" label="lblfieldelement" description="" size="10" required="true"/>
+</form>

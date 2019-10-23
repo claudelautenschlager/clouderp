@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://techjoomla.com/joomla-development/joomla-using-jlayouts-search-tools-on-joomla-3-x-at-admin-backend-for-list-views.html -->
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="" description="" hint="JSEARCH_FILTER" />
+	</fields>
+</form>

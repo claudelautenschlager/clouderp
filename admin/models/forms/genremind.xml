@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+	<field name="id" type="hidden"/>
+	<field name="cids" type="text"/>
+	
+	<field
+			name="title"
+			type="text"
+			label="COM_COMCLOUD_GENFACTURA_FIELD_TITLE_LABEL"
+			description="COM_COMCLOUD_GENFACTURA_FIELD_TITLE_DESC"
+			size="40"
+			class="inputbox validate-title"
+			validate="title"
+			required="true"
+			default="Testbeispiel:"
+	/>
+	<field name="email_body" 
+		   type="editor" 
+		   label="COM_CLOUDERP_GENFACTURA_GENFACTURA_FIELD_MAILBODY_LABEL" 
+		   description="COM_CLOUDERP_GENFACTURA_FIELD_MAILBODY_DESC" 
+		   required="false" 
+		   cols="3"
+		   rows="20"
+		   filter="safehtml"
+		   editor="desired"
+		   buttons="false"
+		   default="{{anrede}}, {{vorname}}, {{nachname}}, {{strasse}}, {{plz}}, {{ort}}, {{zahlungsfrist}}, {{telefon}}, {{natel}}, {{parameter1}}, {{parameter2}}, {{parameter3}}, {{parameter4}}, {{rechnungstitel}}, {{email}}"
+		   
+	/>
+	<field name="fakturadatum" type="calendar" format="%d.%m.%Y" translateformat="false" label="COM_COMCLOUD_GENFACTURA_FIELD_MAHNADATUM_LABEL" description="COM_COMCLOUD_GENFMAHN_FIELD_FAKTURADATUM_DESC" class="inputbox" required="false" default="31.10.2019"/>
+	<field name="zahlungsfrist" type="calendar" format="%d.%m.%Y" translateformat="false" label="COM_COMCLOUD_GENFACTURA_FIELD_ZAHLUNGSFRIST_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_ZAHLUNGSFRIST_DESC" class="inputbox" required="false" default="31.10.2019"/>
+	
+	<field name="templateid" 
+		type="sql" 
+		query="Select id as value, title as templateid from #__0001_cerp_template order by 2"
+		label="COM_CLOUDERP_GENFACTURA_FIELD_TEMPLATE_LABEL" 
+		description="COM_CLOUDERP_GENFACTURA_FIELD_TEMPLATE_DESC" 
+		default="0" />
+	
+	<field name="email_subject" type="text" label="COM_COMCLOUD_GENFACTURA_FIELD_SUBJECT_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_SUBJECT_DESC" size="120" required="true" default="Rechnung für"/>
+	<field name="param1" type="text" label="COM_COMCLOUD_GENFACTURA_FIELD_PARAM1_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_PARAM1_DESC" size="100" required="false" default=""/>
+	<field name="param2" type="text" label="COM_COMCLOUD_GENFACTURA_FIELD_PARAM2_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_PARAM2_DESC" size="100" required="false" default=""/>
+	<field name="param3" type="text" label="COM_COMCLOUD_GENFACTURA_FIELD_PARAM3_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_PARAM3_DESC" size="100" required="false" default=""/>
+	<field name="param4" type="text" label="COM_COMCLOUD_GENFACTURA_FIELD_PARAM4_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_PARAM4_DESC" size="100" required="false" default=""/>
+	
+	<field name="fakturadatumformat" type="Dateprintformat" label="COM_COMCLOUD_GENFACTURA_FIELD_FORMAT_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_FORMAT_DESC" required="true" />
+	<field name="zahlungsfristformat" type="Dateprintformat" label="COM_COMCLOUD_GENFACTURA_FIELD_FORMAT_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_FORMAT_DESC" required="true" />
+	
+	<field name="remindlevel" type="number" min="1" step="1" label="COM_COMCLOUD_GENFACTURA_FIELD_REMINDLEVEL_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_REMINDLEVEL_DESC" required="true" default="1" />
+	<field name="remindcost" type="number" label="COM_COMCLOUD_GENFACTURA_FIELD_REMINDCOST_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_COST_DESC" required="true" default="0"/>
+	
+
+	
+<!--	
+	<field name="verrechnetbisformat" type="list" label="COM_COMCLOUD_GENFACTURA_FIELD_FORMAT_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_FORMAT_DESC" required="true">
+		<option value="%d. %m. %Y">23.09.2018</option>
+		<option value="%d. %b. %Y">23. Sept. 2018</option>
+		<option value="%d. %B %Y">23. September 2018</option>
+		<option value="Ende %B %Y">Ende Septmber 2018</option>
+	</field>
+-->	
+</form>

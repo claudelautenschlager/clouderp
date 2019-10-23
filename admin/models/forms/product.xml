@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+		<field name="id" type="hidden"/>
+		
+		<field
+                name="title"
+                type="text"
+                label="COM_COMCLOUD_PRODUCT_FIELD_TITLE_LABEL"
+                description="COM_COMCLOUD_PRODUCT_FIELD_TITLE_DESC"
+                size="40"
+                class="inputbox validate-title"
+                validate="title"
+                required="true"
+        />
+		<field name="description" 
+			   type="editor" 
+			   label="COM_CLOUDERP_PRODUCT_PRODUCT_FIELD_DESCRIPTION_LABEL" 
+			   description="COM_CLOUDERP_PRODUCT_FIELD_DESCRIPTION_DESC" 
+			   required="false" 
+			   cols="3"
+			   rows="20"
+			   editor="desired"
+			   buttons="false"
+		/>
+		
+		<field name="vp" type="number" label="COM_COMCLOUD_PRODUCT_FIELD_VP_LABEL" description="COM_COMCLOUD_PRODUCT_FIELD_VP_DESC" size="10" required="true"/>
+		<field name="accountsell" type="financeaccount" label="COM_COMCLOUD_PRODUCT_FIELD_ACCOUNT_LABEL" description="COM_COMCLOUD_PRODUCT_FIELD_ACCOUNT_DESC" required="true"/>
+
+</form>

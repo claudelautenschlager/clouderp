@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+		<field name="id" type="hidden"/>
+		<field name="betrag" type="number" label="COM_COMCLOUD_PAYMENT_FIELD_BETRAG_LABEL" description="COM_COMCLOUD_PAYMENT_FIELD_BETRAG_DESC" class="inputbox " validate="" required="true" default=""/>
+		<field name="zahlungsdatum" type="calendar" format="%d.%m.%Y" translateformat="false" label="COM_COMCLOUD_PAYMENT_FIELD_PAYMENTDATUM_LABEL" description="COM_COMCLOUD_PAYMENT_FIELD_PAYMENTDATUM_DESC" default="NOW" class="inputbox" required="true"/>		
+</form>

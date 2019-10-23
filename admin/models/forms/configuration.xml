@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+	<field name="id" type="hidden"/>
+	<field name="smtp_host" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_HOST_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_HOST_DESC" size="128" required="true" />
+	<field name="smtp_port" type="text" label="COM_CLOUDERP_GENFACTURA_GENFACTURA_FIELD_PORT_LABEL" description="COM_CLOUDERP_GENFACTURA_FIELD_PORT_DESC" required="true" size="3"/>
+	<field name="smtp_sendername" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTSENDERNAME_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTSENDERNAME_DESC" size="120" required="true"/>
+	<field name="smtp_username" type="text" label="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTUSERNAME_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTUSERNAME_DESC" size="120" required="true"/>
+	<field name="smtp_password" type="password" label="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTPW_LABEL" description="COM_COMCLOUD_CONFIGURATION_FIELD_SMPTPW_DESC" size="100" required="false"/>
+</form>

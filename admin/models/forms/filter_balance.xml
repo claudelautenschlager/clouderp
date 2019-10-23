@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="dateper" type="calendar" format="%d.%m.%Y" translateformat="false" label="Stichtag" description="fsdfjklsdfj sdfjsdf sdfkjsld" hint="Bilanz per" />
+	</fields>
+</form>

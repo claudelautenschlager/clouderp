@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+		<field name="id" type="hidden"/>
+		
+		<field
+                name="title"
+                type="text"
+                label="COM_CLOUDERP_TEMPLATE_FIELD_TITLE_LABEL"
+                description="COM_CLOUDERP_TEMPLATE_FIELD_TITLE_DESC"
+                size="40"
+                class="inputbox validate-title"
+                validate="title"
+                required="true"
+                default=""
+        />
+		<field name="template" 
+			   type="editor" 
+			   label="COM_CLOUDERP_TEMPLATE_FIELD_DESCRIPTION_LABEL" 
+			   description="COM_CLOUDERP_TEMPLATE_FIELD_DESCRIPTION_DESC" 
+			   required="false" 
+			   cols="3"
+			   rows="20"
+			   editor="desired"
+			   filter="safehtml"
+			   buttons="false"
+		/>
+</form>

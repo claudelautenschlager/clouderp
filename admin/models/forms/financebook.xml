@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules" enctype="multipart/form-data">
+		<field name="id" type="hidden"/>
+		<field name="bookitemjson" type="hidden"/>
+		<field name="bu_text" type="text" label="COM_COMCLOUD_FINANCEBOOK_FIELD_BUTEXT_LABEL" description="COM_COMCLOUD_FINANCEBOOK_FIELD_BUTEXT_DESC" size="100" class="inputbox input-xxlarge" required="true"/>
+		<field name="bu_datum" type="calendar" format="%d.%m.%Y" translateformat="false" label="COM_COMCLOUD_FINANCEBOOK_FIELD_DATUM_LABEL" description="COM_COMCLOUD_FINANCEBOOK_FIELD_DATUM_DESC" class="inputbox" required="true"/>
+		<field name="bu_belegnr" type="text" label="COM_COMCLOUD_FINANCEBOOK_FIELD_BELEGNR_LABEL" description="COM_COMCLOUD_FINANCEBOOK_FIELD_BELEGNR_DESC" size="20" class="inputbox" required="false"/>
+		<field name="saldo" type="number" label="COM_COMCLOUD_FINANCEBOOK_FIELD_SALDO_LABEL" description="COM_COMCLOUD_FINANCEBOOK_FIELD_SALDO" size="10" disabled ="true"/>
+<!-- 		<field name="bu_belegfile" type="file" label="COM_COMCLOUD_FINANCEBOOK_FIELD_FILE_LABEL" description="COM_COMCLOUD_FINANCEBOOK_FIELD_FILE_DESC" size="10" accept=".pdf,image/*" />  -->
+</form>

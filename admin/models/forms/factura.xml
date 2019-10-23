@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+		<field name="id" type="hidden"/>
+		
+		<field
+                name="title"
+                type="text"
+                label="COM_COMCLOUD_FACTURA_FIELD_TITLE_LABEL"
+                description="COM_COMCLOUD_FACTURA_FIELD_TITLE_DESC"
+                size="40"
+                class="inputbox validate-title"
+                validate="title"
+                required="true"
+        />
+		<field name="status" type="facturastate" label="COM_COMCLOUD_FACTURA_FIELD_STATE_LABEL" description="" hint="JSEARCH_FILTER"/>
+		<field name="email_body" 
+			   type="editor" 
+			   label="COM_CLOUDERP_GENFACTURA_GENFACTURA_FIELD_MAILBODY_LABEL" 
+			   description="COM_CLOUDERP_GENFACTURA_FIELD_MAILBODY_DESC" 
+			   required="false" 
+			   cols="3"
+			   rows="20"
+			   editor="desired"
+			   filter="safehtml"
+			   buttons="false"
+		/>
+		<field name="facturemedium" type="list" label="COM_COMCLOUD_CUSTOMER_FIELD_MEDIUM_LABEL" description="COM_CURLINGEVENTS_CURLINGEVENT_FIELD_MEDIUM_DESC" default="1">
+			<option value="1">COM_COMCLOUD_CUSTOMER_FIELD_MEDIUM_MAIL</option>
+			<option value="2">COM_COMCLOUD_CUSTOMER_FIELD_MEDIUM_PRINT</option>
+		</field>
+		<field name="email_subject" type="text" label="COM_COMCLOUD_FACTURA_FIELD_SUBJECT_LABEL" description="COM_COMCLOUD_FACTURA_FIELD_SUBJECT_DESC" size="120" required="true"/>
+		<field name="email" type="email" label="COM_COMCLOUD_FACTURA_FIELD_EMAIL_LABEL" description="COM_COMCLOUD_FACTURA_FIELD_EMAIL_DESC" size="100" required="false"/>
+		<field name="fakturadatum" type="calendar" format="%d.%m.%Y" translateformat="false" label="COM_COMCLOUD_GENFACTURA_FIELD_FAKTURADATUM_LABEL" description="COM_COMCLOUD_GENFACTURA_FIELD_FAKTURADATUM_DESC" class="inputbox" required="false" default="31.10.2019"/>		
+</form>

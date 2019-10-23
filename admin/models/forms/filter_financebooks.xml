@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://techjoomla.com/joomla-development/joomla-using-jlayouts-search-tools-on-joomla-3-x-at-admin-backend-for-list-views.html -->
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="" description="" hint="JSEARCH_FILTER" />
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_COMCLOUD_FINANCEBOOKLIST_FULL_ORDERING"
+			description="COM_COMCLOUD_FINANCEBOOKLIST_FULL_ORDERING_DESC"
+			onchange="Joomla.submitform();return false;"
+			default="1 ASC"
+			>
+			<option value="">COM_COMCLOUD_FINANCEBOOKLIST_SORT_BY</option>
+			<option value="bu_text ASC">COM_COMCLOUD_FINANCEBOOK_TITLE_ASC</option>
+			<option value="bu_text DESC">COM_COMCLOUD_FINANCEBOOK_TITLE_DESC</option>
+			<option value="bu_datum ASC">COM_COMCLOUD_FINANCEBOOK_DATE_ASC</option>
+			<option value="bu_datum DESC">COM_COMCLOUD_FINANCEBOOK_DATE_DESC</option>
+		</field>
+<!-- onchange="console.log(this.value);document.adminForm.filter_order.value=this.value.split(' ')[0];document.adminForm.filter_order_Dir.value=this.value.split(' ')[1];Joomla.submitform();return false;"-->
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_COMCLOUD_FINANCEBOOK_LIMIT"
+			description="COM_COMCLOUD_FINANCEBOOK_LIMIT_DESC"
+			class="inputbox input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+	
+</form>

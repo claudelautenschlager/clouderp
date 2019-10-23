@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_clouderp/models/rules">
+		<field name="id" type="hidden"/>
+		<field name="catid" type="Category" extension="com_clouderp" class="inputbox" default="" label="COM_COMCLOUD_CUSTOMER_FIELD_CATID_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_CATID_DESC" required="true">
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		
+		<field name="sayhello" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_SAYHELLO_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_SAYHELLO_DESC" size="50" class="inputbox" validate="" required="true" default="Liebe "/>
+		<field name="firstname" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_FIRSTNAME_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_FIRTSNAME_DESC" size="30" class="inputbox" validate="" required="true" default=""/>
+		<field name="lastname" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_LASTNAME_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_LASTNAME_DESC" size="30" class="inputbox" validate="" required="true" default=""/>
+		<field name="email" type="email" label="COM_COMCLOUD_CUSTOMER_FIELD_EMAIL_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_EMAIL_DESC" size="40" class="inputbox " validate="" required="false" default=""/>
+		<field name="phone" type="tel" label="COM_COMCLOUD_CUSTOMER_FIELD_PHONE_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_PHONE_DESC" size="40" class="inputbox " validate="" required="false" default=""/>
+		<field name="mobil" type="tel" label="COM_COMCLOUD_CUSTOMER_FIELD_MOBILE_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_MOBILE_DESC" size="40" class="inputbox " validate="" required="false" default=""/>
+		
+		<field name="address" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_ADDRESS_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_ADDRESS_DESC" size="40" class="inputbox" validate="" required="true" default=""/>		
+		<field name="zipcode" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_ZIPCODE_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_ZIPCODE_DESC" size="10" class="inputbox" validate="" required="true" default=""/>		
+		<field name="town" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_TOWN_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_TOWN_DESC" size="50" class="inputbox" validate="" required="true" default=""/>		
+		<field name="birth" type="calendar" format="%d.%m.%Y" translateformat="false" label="COM_COMCLOUD_CUSTOMER_FIELD_BIRTH_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_BIRTH_DESC" class="inputbox" required="false" default=""/>
+		
+		<field name="entrydate" type="integer" first="1950" last="2030" step="1" label="COM_COMCLOUD_CUSTOMER_FIELD_ENTRYDATE_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_ENTRYDATE_LABEL_DESC" default="2020" />
+<!--		
+		<field name="price1" type="number" label="COM_COMCLOUD_CUSTOMER_FIELD_PRICE1_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_PRICE1_DESC" class="inputbox " validate="" required="false" default=""/>
+		<field name="price2" type="number" label="COM_COMCLOUD_CUSTOMER_FIELD_PRICE2_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_PRICE2_DESC" class="inputbox " validate="" required="false" default=""/>
+-->
+		<field name="fak_name" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_NAMEFAK_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_NAMEFAK_DESC" size="50" class="inputbox" validate="" required="false" default=""/>		
+		<field name="fak_address" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_ADDRESSFAK_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_ADDRESSFAK_DESC" size="50" class="inputbox" validate="" required="false" default=""/>		
+		<field name="fak_zipcode" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_ZIPCODEFAK_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_ZIPCODEFAK_DESC" size="10" class="inputbox" validate="" required="false" default=""/>		
+		<field name="fak_town" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_TOWNFAK_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_TOWNFAK_DESC" size="30" class="inputbox" validate="" required="false" default=""/>		
+
+		<field name="comment" type="textarea" label="COM_COMCLOUD_CUSTOMER_FIELD_COMMENT_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_COMMENT_DESC" rows="20" class="inputbox " validate="" required="false" default=""/>
+		<field name="productabo" type="productlist" label="COM_COMCLOUD_CUSTOMER_FIELD_PRODUCTABO_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_PRODUCTABO_DESC" required="true"/>
+		<field
+			name="propagateUser"
+			type="radio"
+			label="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEUSER_LABEL"
+			description="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEUSER_DESC"
+			default="1"
+			class="btn-group btn-group-yesno"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+			name="propagateDav"
+			type="radio"
+			label="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEDAV_LABEL"
+			description="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEDAV_DESC"
+			default="1"
+			class="btn-group btn-group-yesno"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="david" type="text" label="COM_COMCLOUD_CUSTOMER_FIELD_DAVID_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_DAVID_DESC" size="200" class="inputbox" validate="" required="false" default=""/>		
+		<field name="publicationrestriction" type="list" label="COM_COMCLOUD_CUSTOMER_FIELD_RESTICT_LABEL" description="COM_CURLINGEVENTS_CURLINGEVENT_FIELD_RESTICT_DESC" default="0">
+			<option value="0">COM_COMCLOUD_CUSTOMER_FIELD_RESTICT_NONE</option>
+			<option value="1">COM_COMCLOUD_CUSTOMER_FIELD_RESTICT_ALL</option>
+			<option value="2">COM_COMCLOUD_CUSTOMER_FIELD_RESTICT_TEL</option>
+			<option value="3">COM_COMCLOUD_CUSTOMER_FIELD_RESTICT_ADDRESS</option>
+		</field>
+		<field
+			name="publicationrestriction"
+			type="radio"
+			label="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEDAV_LABEL"
+			description="COM_CLOUDERP_CONFIG_FIELD_PROPAGATEDAV_DESC"
+			default="1"
+			class="btn-group btn-group-yesno"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="maildistribution" 
+			type="sql" 
+			query="Select id as value, title as maildistribution from #__0001_cerp_maildistributer where title&lt;&gt;'myselv' order by 2"
+			label="COM_CLOUDERP_GENFACTURA_FIELD_MAILDIST_LABEL" 
+			description="COM_CLOUDERP_GENFACTURA_FIELD_MAILDIST_DESC" 
+			multiple="true" />
+		
+		
+		<field name="facturemedium" type="list" label="COM_COMCLOUD_CUSTOMER_FIELD_MEDIUM_LABEL" description="COM_CURLINGEVENTS_CURLINGEVENT_FIELD_MEDIUM_DESC" default="1">
+			<option value="1">COM_COMCLOUD_CUSTOMER_FIELD_MEDIUM_MAIL</option>
+			<option value="2">COM_COMCLOUD_CUSTOMER_FIELD_MEDIUM_PRINT</option>
+		</field>
+		<field name="catidfuture" type="Category" extension="com_clouderp" class="inputbox" default="" label="COM_COMCLOUD_CUSTOMER_FIELD_CATIDFUT_LABEL" description="COM_COMCLOUD_CUSTOMER_FIELD_CATIDFUT_DESC">
+			<option value="0">COM_COMCLOUD_CUSTOMER_FIELD_CATIDFUT_NONE</option>
+			<option value="99">COM_COMCLOUD_CUSTOMER_FIELD_CATIDFUT_TERMINATE</option>
+		</field>		
+		
+</form>		

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.7.0" method="upgrade">
+	<name>COM_CLOUDERP</name>
+	<creationDate>August 2019</creationDate>
+	<author>Claude Lautenschlager</author>
+	<authorEmail>claude@lautenschlager.ch</authorEmail>
+	<authorUrl>http://www.example.org</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>0.0.1</version>
+	<description>COM_CLOUDERP_DESCRIPTION</description>
+
+	<!-- PHP-Skript wird ausgeführt bei Installation, Deinstallation und Update -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- SQL-Skript für die Installation -->
+	<install> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<!-- SQL-Skript für die Deinstallation -->
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+ 	<!-- Kopieranweisungen für das Media-Verzeichnis -->
+<!--	
+	<media destination="com_clouderp" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+-->	
+	<!-- Kopieranweisungen für das Frontend -->
+	<files folder="site">
+		<filename>clouderp.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+	</files>
+	
+	<administration>
+		<menu img="../media/com_curlingevents/images/curlingevents-16x16.png">COM_CLOUDERP</menu>
+		<!-- Kopieranweisungen für das Backend -->
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>clouderp.php</filename>
+			<filename>controller.php</filename>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>sql</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>3rdparty</folder>
+		</files>
+ 
+		<languages folder="admin">
+			<language tag="de-CH">language/de-CH/de-CH.com_clouderp.ini</language>
+			<language tag="de-CH">language/de-CH/de-CH.com_clouderp.sys.ini</language>
+		</languages>
+	</administration>
+ 
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<server type="extension" priority="1" name="Jobs Update Site">http://yourdomain.com/update/jobs-update.xml</server>
+	</updateservers>
+ 
+</extension>
