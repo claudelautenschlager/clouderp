@@ -1,2 +1,2 @@
 # rink-office
-Webapplication for managing a club
+This is a component for Joomla. It should help managing a club. 
